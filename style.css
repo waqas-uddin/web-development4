@@ -1,0 +1,157 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.parent {
+    background-color: #000;
+    height: 500px;
+    width: 100%; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+}
+
+
+.child {
+    background-color: #fff;
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    position: relative;
+
+}
+
+.merge {
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+
+}
+
+
+@keyframes banoqabil {
+    0%{
+        background-color: aquamarine;
+        top: 0;
+        left: 0;
+        transform: scale(40%);
+    }
+
+    50%{
+        background-color: yellow;
+        top: 50px;
+        left: 50px;
+        transform: scale(80%);
+    }
+
+    100%{
+        background-color: red;
+        top: 0;
+        left: 0;
+        transform: scale(20%);
+    }
+    
+}
+
+.child:nth-child(4n-2){
+    background-color: aqua;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .parent {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .parent {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .parent {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .parent {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+
+
+/* *{
+    padding: 0%;
+    margin: 0;
+    box-sizing: border-box;
+}
+.parent{
+    background-color: black;
+    height: 50vh;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 133px 133px 133px ;
+    grid-template-columns: repeat(4,1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+    justify-items: center;
+    align-items: baseline;
+}
+
+.child{
+    background-color: blue;
+    width: 10vh;
+    height: 10vw;
+
+}
+
+.anim{
+    animation-name: zohaib;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes zohaib {
+    0%{
+        background-color: red;
+        top: 0;
+        left: 0;
+    }
+
+    20%{
+        top: 20px;
+        right: 20px;
+
+    }
+
+    40%{
+        top: 40px;
+        right: 40px;
+
+    }
+    60%{
+        top: 60px;
+        right: 60px;
+
+    }
+    80%{
+        top: 80px;
+        right: 80px;
+
+    }
+}
+.merge{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+:first-child{
+    color: aqua ;
+} */
